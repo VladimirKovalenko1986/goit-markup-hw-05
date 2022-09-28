@@ -51,16 +51,6 @@ ul {
   /* outline: 1px solid tomato; */
 }
 
-a {
-  transition: background-color 250ms var(--cubic-all),
-    border 250ms var(--cubic-all), box-shadow 250ms var(--cubic-all);
-}
-
-button {
-  transition: background-color 250ms var(--cubic-all),
-    box-shadow 250ms var(--cubic-all);
-}
-
 .title {
   text-align: center;
   margin-bottom: 50px;
@@ -120,8 +110,6 @@ button {
 /* Header */
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
   border-bottom: 1px solid var(--color-border-header);
 }
 
@@ -161,13 +149,16 @@ button {
   position: relative;
 
   display: block;
-  padding: 5px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 
   color: var(--color-secondery-text);
 
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0.02em;
+
+  transition: background-color 250ms var(--cubic-all);
 }
 
 .current {
@@ -177,9 +168,9 @@ button {
 
 .header-link .current::after {
   position: absolute;
-  left: 50%;
-  bottom: -28px;
 
+  left: 50%;
+  bottom: 0;
   content: "";
   width: 100%;
   height: 4px;
@@ -210,6 +201,8 @@ button {
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0.02em;
+
+  transition: background-color 250ms var(--cubic-all);
 }
 
 .header-link-contact svg {
@@ -267,6 +260,9 @@ button {
   font-weight: 700;
   line-height: 1.9;
   letter-spacing: 0.06em;
+
+  transition: background-color 250ms var(--cubic-all),
+    box-shadow 250ms var(--cubic-all);
 }
 
 .hero-btn:hover,
@@ -442,6 +438,8 @@ button {
   justify-content: center;
   align-items: center;
   background-color: var(--color-hero-title);
+
+  transition: background-color 250ms var(--cubic-all);
 }
 
 .team-link-social:hover,
@@ -457,7 +455,7 @@ button {
   fill: var(--color-hero-title);
 }
 
-/* Client */
+/* Clients */
 
 .clients {
   padding: 94px 0;
@@ -480,6 +478,8 @@ button {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+
+  transition: border 250ms var(--cubic-all);
 }
 
 .clients-link:hover,
@@ -489,6 +489,8 @@ button {
 
 .clients-link svg {
   fill: var(--color-icons-partners);
+
+  transition: fill 250ms var(--cubic-all);
 }
 
 .clients-link:hover svg,
@@ -529,6 +531,9 @@ button {
   font-weight: 500;
   line-height: 1.6;
   letter-spacing: inherit;
+
+  transition: background-color 250ms var(--cubic-all),
+    color 250ms var(--cubic-all), box-shadow 250ms var(--cubic-all);
 }
 
 .function-btn:hover,
@@ -564,6 +569,8 @@ button {
 
 .pictures-link {
   display: block;
+
+  transition: box-shadow 250ms var(--cubic-all);
 }
 
 .pictures-link:hover,
@@ -674,6 +681,8 @@ button {
   display: block;
 
   color: var(--color-footer-text);
+
+  transition: color 250ms var(--cubic-all);
 }
 
 .footer-contact:hover,
@@ -711,6 +720,8 @@ button {
   justify-content: center;
 
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms var(--cubic-all);
 }
 
 .footer-link-social:hover,
@@ -758,33 +769,28 @@ button {
   transition: transform 250ms var(--cubic-all);
 }
 
+.modal svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+
+  fill: var(--color-logo-text);
+}
+
 .close-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 8px;
+  right: 8px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  /* outline: 1px solid tomato; */
 
   background-color: var(--color-hero-title);
-}
-
-.close-button::after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  width: 15px;
-  height: 15px;
-  display: block;
-
-  background-image: url("../images/icon-close-modal.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  transform: translate(-50%, -50%);
 }
 
 .is-hidden {
