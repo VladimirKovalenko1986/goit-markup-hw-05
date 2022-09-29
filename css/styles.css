@@ -149,8 +149,7 @@ ul {
   position: relative;
 
   display: block;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding: 32px 0;
 
   color: var(--color-secondery-text);
 
@@ -169,7 +168,7 @@ ul {
 .header-link .current::after {
   position: absolute;
 
-  left: 50%;
+  left: 0;
   bottom: 0;
   content: "";
   width: 100%;
@@ -178,8 +177,6 @@ ul {
   border-radius: 2px;
 
   background-color: var(--color-text-logonav);
-
-  transform: translateX(-50%);
 }
 
 .header-list-contact {
@@ -207,6 +204,8 @@ ul {
 
 .header-link-contact svg {
   margin-right: 10px;
+
+  fill: currentColor;
 }
 
 .header-link-contact:hover svg,
@@ -449,6 +448,8 @@ ul {
 
 .team-link-social svg {
   fill: var(--color-icons-partners);
+
+  transition: fill 250ms var(--cubic-all);
 }
 
 .team-link-social:hover svg {
@@ -769,18 +770,17 @@ ul {
   transition: transform 250ms var(--cubic-all);
 }
 
-.modal svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  transform: translate(-50%, -50%);
-
+.close-button svg {
   fill: var(--color-logo-text);
 }
 
 .close-button {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
   top: 8px;
   right: 8px;
   width: 30px;
