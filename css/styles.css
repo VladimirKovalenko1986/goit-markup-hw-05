@@ -157,7 +157,7 @@ ul {
   line-height: 1.1;
   letter-spacing: 0.02em;
 
-  transition: background-color 250ms var(--cubic-all);
+  transition: color 250ms var(--cubic-all);
 }
 
 .current {
@@ -199,13 +199,15 @@ ul {
   line-height: 1.1;
   letter-spacing: 0.02em;
 
-  transition: background-color 250ms var(--cubic-all);
+  transition: color 250ms var(--cubic-all);
 }
 
 .header-link-contact svg {
   margin-right: 10px;
 
   fill: currentColor;
+
+  transition: fill 250ms var(--cubic-all);
 }
 
 .header-link-contact:hover svg,
